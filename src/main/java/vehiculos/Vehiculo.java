@@ -26,7 +26,7 @@ public class Vehiculo {
         this.fabricante = fabricante;
         CantidadVehiculos ++ ;
         this.fabricante.getPais().setNumeroCreados(); 
-        this.fabricante.fabricados ++;
+        this.fabricante.setFabricados();
         
 
     }
