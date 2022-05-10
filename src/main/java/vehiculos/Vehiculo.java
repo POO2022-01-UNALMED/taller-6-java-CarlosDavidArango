@@ -25,8 +25,8 @@ public class Vehiculo {
         this.traccion = traccion;
         this.fabricante = fabricante;
         CantidadVehiculos ++ ;
-        fabricante.getPais().numeroCreados ++;
-        fabricante.fabricados ++;
+        this.fabricante.getPais().numeroCreados ++;
+        this.fabricante.fabricados ++;
         
 
     }
