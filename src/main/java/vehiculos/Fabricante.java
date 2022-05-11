@@ -32,14 +32,14 @@ public class Fabricante {
         return fabricados;
     }
     public void setFabricados() {
-        this.fabricados = fabricados +1;
+        this.fabricados ++;
     }
 
     public static Fabricante fabricaMayorVentas(){
         Fabricante mas = Fabricante.fabricantes.get(0);
         for(int i = 1; i < Fabricante.fabricantes.size(); i++){
             if (Fabricante.fabricantes.get(i).fabricados >= Fabricante.fabricantes.get( i-1 ).fabricados){
-                mas = Fabricante.fabricantes.get(i);
+                mas = Fabricante.fabricantes.get(i -1 );
             }
         }
         return mas;
