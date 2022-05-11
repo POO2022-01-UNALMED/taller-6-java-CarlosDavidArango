@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Pais {
 
     private String nombre;
-    public static ArrayList<Pais> paises;
+    public static ArrayList<Pais> paises = new ArrayList<Pais>();
     private int numeroCreados;
 
     public Pais(String nombre){
@@ -26,14 +26,14 @@ public class Pais {
         return numeroCreados;
     }
     public void setNumeroCreados() {
-        this.numeroCreados = numeroCreados + 1;
+        this.numeroCreados = numeroCreados +1;
     }
 
     public static Pais paisMasVendedor(){
         Pais mas = Pais.paises.get(0);
-        for(int i = 0; i < Pais.paises.size(); i++){
-            if (Pais.paises.get(i + 1).numeroCreados > Pais.paises.get(i).numeroCreados){
-                mas = Pais.paises.get(i + 1);
+        for(int i = 1; i < Pais.paises.size(); i++){
+            if (Pais.paises.get(i).numeroCreados > Pais.paises.get(i - 1).numeroCreados){
+                mas = Pais.paises.get(i);
             }
         }
         return mas;
